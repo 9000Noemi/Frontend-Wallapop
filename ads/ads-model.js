@@ -1,9 +1,19 @@
 //Obtención de daros desde SPARREST
 
-export async function getAds(){
+export async function getAds() {
 
-    const response = await fetch("http://localhost:8000/api/ads");
-    const ads = await response.json();
+    try {
+        const response = await fetch("http://localhost:8000/api/ads");
+        //Si la peticion no ha ido bien:
+        if (!response.ok) {
+            throw new Error("Recurso no existente");
+        }
+        const ads = await response.json();
 
-    return ads;
+        return ads;
+
+    } catch (error) {
+        return []
+    }
 }
+
