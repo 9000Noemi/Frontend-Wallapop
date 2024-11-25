@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear anuncio</title>
+</head>
+
+<body>
+
+    <!--Formulario-->
+    <form id="ad-form" method="post" autocomplete="off">
+        <h2>Publicar un nuevo anuncio</h2>
+
+        
+
+        <div>
+            <label for="image">Subir imagen</label>
+            <input type="file" id="image" name="Image"  accept="image/*" multiple>
+        </div>
+
+        <div>
+            <label for="name">Nombre del producto</label>
+            <input type="text" id="name" name="Name" required>
+        </div>
+
+        <div>
+            <label for="description">Descripción</label>
+            <textarea id="description" name="Description" placeholder="Describe tu producto" 
+            rows="4" maxlength="300" required></textarea>
+        </div>
+
+        <div>
+            <label for="price">Precio (€)</label>
+            <input type="number" id="price" name="Price" placeholder="Ej: 59,99" min="0" required>
+        </div>
+
+        <div>
+            <legend>¿Es una compra o una venta?</legend>
+        </div>
+
+        <div>
+            <label for="purchase">Compra</label>
+            <input type="radio" id="purchase" name="purchaseorsale" value="PURCHASE" required checked>
+          </div>
+
+          <div>
+            <label for="sale">Venta</label>
+            <input type="radio" id="sale" name="purchaseorsale" value="SALE" required>
+          </div>
+
+
+        <button type="submit">Crear anuncio</button>
+    </form>
+
+    <script type="module" src="./create-tweet.js"></script>
+</body>
+
+</html>
