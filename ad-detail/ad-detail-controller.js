@@ -1,8 +1,8 @@
 import { getCurrentUserInfo } from "../auth/auth-model.js"
 import { getAd, removeAd } from "./ad-detail.model.js"
-import { buildDeleteButton, buildTweetDetail } from "./tweet-detail-view.js"
+import { buildDeleteButton, buildAdDetail } from "./ad-detail-view.js"
 
-export async function adDetailController(adDetailContainer, adId) {//1er parametro es el nodo definido de add-details.js
+export async function adDetailController(adDetailContainer, adId) {//1er parametro es el nodo definido de ad-details.js
 
   try {
     const ad = await getAd(adId)

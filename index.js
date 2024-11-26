@@ -1,4 +1,3 @@
-//Orquestador de controladores
 
 import { sessionController } from "./session/session-controller.js";
 import { adsController } from "./ads/ads-controller.js";
@@ -9,10 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sessionContainer = document.querySelector("#session");
 
   sessionController(sessionContainer)
-  tweetsController(tweetsContainer)
-  const { showNotification } = notificationController(notificationsContainer)
-
+  adsController(adsContainer)
+  //const { showNotification } = notificationController(notificationsContainer)
+/*
   tweetsContainer.addEventListener("loading-tweets-info", (event) => {
     showNotification(event.detail.message, event.detail.type);
   })
+*/
 })
