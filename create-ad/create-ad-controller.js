@@ -1,4 +1,4 @@
-import { createAd } from "./create-ad-model";
+import { createAd } from "./create-ad-model.js";
 
 export function createAdController(createAdForm) {
 
@@ -18,7 +18,7 @@ export function createAdController(createAdForm) {
         const type = typeRadio ? typeRadio.value : null; // Obtiene el valor de radio seleccionado
 
         //Validación (a parte del required de html)
-        if (!nameInput.value || !descriptionInput.value || !priceInput.value || !imageInput.files.length || !type) {
+        if (!nameInput.value || !descriptionInput.value || !priceInput.value || !type) {
             alert("Por favor, completa todos los campos obligatorios");
             return;
         }

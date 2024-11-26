@@ -10,7 +10,6 @@ export function signupController(form) {
     const userEmailElement = form.querySelector("#user-mail");
     const passwordElement = form.querySelector("#password");
 
-    console.log(userEmailElement)
     
     const userEmail = userEmailElement.value;
     const password = passwordElement.value;
@@ -36,9 +35,10 @@ export function signupController(form) {
 }
 
 async function handleCreateUser(userEmail, password) {
-  // 3- consumir sparrest para crear el usuario
+  //Consumir sparrest para crear el usuario, dar feedback y redirigir a la home
   try {
     await createUser(userEmail, password)
+    alert("Te has registrado correctamente");
     window.location.href = "/";
   } catch (error) {
     alert(error.message)

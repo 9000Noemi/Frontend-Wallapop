@@ -1,0 +1,73 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* Estilo para el contenedor de los anuncios */
+#ads-container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+/* Estilo para cada anuncio */
+.ad-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.ad-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen del anuncio */
+.ad-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Título del anuncio */
+.ad-card h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Descripción y precio */
+.ad-card p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.ad-card .price {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.2em;
+}
