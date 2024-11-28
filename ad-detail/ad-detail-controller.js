@@ -1,40 +1,55 @@
 import { getCurrentUserInfo } from "../auth/auth-model.js"
 import { getAd, removeAd } from "./ad-detail.model.js"
 import { buildDeleteButton, buildAdDetail } from "./ad-detail-view.js"
+import { isUserLoggedIn } from "../utils/auth.js"
+import { showSpinner, hideSpinner } from "../utils/spinner.js"
 
-export async function adDetailController(adDetailContainer, adId) {//1er parametro es el nodo definido de ad-details.js
+
+
+//Función para controlar la visualización de los detalles de un anuncio( nodo HTML,id del anuncio)
+
+export async function adDetailController(adDetailContainer, adId) {
+
+  const spinner = document.querySelector('.spinner')
+  
+  showSpinner(spinner);
 
   try {
     const ad = await getAd(adId)
-    const user = await getCurrentUserInfo();
 
+    //Pintar el anuncio
     adDetailContainer.innerHTML = buildAdDetail(ad)
+    
+    //Comprobar si hay un usuario logado
 
-    if (user.id === ad.user.id) {
-      const removeButtonElement = buildDeleteButton();
-      adDetailContainer.appendChild(removeButtonElement);
-      removeButtonElement.addEventListener("click", async () => {
-        const shouldRemoveAd = confirm('¿Seguro que quieres borrar el anuncio?');
-        if (shouldRemoveAd) {
-          await removeAd(ad.id);
-          window.location.href = "/"
-        }
-      })
+    if (isUserLoggedIn()) {
+
+      const user = await getCurrentUserInfo();
+      
+      //Comparar el id del autor del anuncio con el id del usuario logado
+      if (user.id === ad.userId) {
+
+        //Si los id's son iguales, crear botón de borrar
+        const removeButtonElement = buildDeleteButton();
+        adDetailContainer.appendChild(removeButtonElement);
+
+        //Cuando el botón se pulse, borrar el tweet, previa confirmación
+        removeButtonElement.addEventListener("click", async () => {
+          const shouldRemoveAd = confirm('¿Seguro que quieres borrar el anuncio?');
+          if (shouldRemoveAd) {
+            await removeAd(ad.id);
+            window.location.href = "/"
+          }
+        })
+      }
     }
   } catch (error) {
     alert(error.message)
     window.location.href = "/"
+  }finally {
+    hideSpinner(spinner);
   }
   
 }
 
 
-// 1- conocer quién es el dueño del tweet mostrado. --> expand
-
-// 2- conocer el identificador del usuario logado.
-
-// 3- comparar el id del autor del tweet mostrado con el id del usuario logado
-
-// 4- si los id's son iguales, pintar el boton
-
-// 5- cuando el botón se pulse, borrar el tweet, previa confirmación

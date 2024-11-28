@@ -1,4 +1,4 @@
-//Obtención de daros desde SPARREST
+//Obtención de datos de los anuncios desde SPARREST
 
 export async function getAds() {
 

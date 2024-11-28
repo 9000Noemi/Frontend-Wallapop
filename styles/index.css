@@ -1,73 +1,100 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
 }
 
 /* Título principal */
 h1 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin: 20px 0;
     text-align: center;
-    margin-top: 20px;
-    color: #333;
-    font-size: 2.5em;
-    margin-bottom: 30px;
 }
 
-/* Estilo para el contenedor de los anuncios */
+/* Sección de sesión */
+#session {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Spinner */
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Ocultar spinner */
+.hidden {
+    display: none;
+}
+
+/* Animación del spinner */
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #ff6600;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #ff6600 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Contenedor de anuncios */
 #ads-container {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 0 20px;
-    margin-top: 20px;
-}
-
-/* Estilo para cada anuncio */
-.ad-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    transition: transform 0.3s;
-}
-
-.ad-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Imagen del anuncio */
-.ad-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* Título del anuncio */
-.ad-card h3 {
-    color: #333;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* Descripción y precio */
-.ad-card p {
-    color: #555;
-    font-size: 1em;
-    margin-bottom: 15px;
-}
-
-.ad-card .price {
-    font-weight: bold;
-    color: #4CAF50;
-    font-size: 1.2em;
 }

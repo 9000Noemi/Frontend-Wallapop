@@ -1,6 +1,5 @@
 export const isUserLoggedIn = () => {
   const token = localStorage.getItem('jwt');
-
-  // transformación a boolean
+  //Transformar a boolean:
   return !!token;
 }

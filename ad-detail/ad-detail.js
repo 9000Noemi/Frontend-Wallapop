@@ -9,9 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const adId = searchParams.get("id");
 
     //Acceder al nodo donde pintaremos el detalle del anuncio
-    const adDetailContainer = document.querySelector("#ad-detail")
+    const adDetailContainer = document.querySelector("#ad-detail");
+
 
     //Llamamos a la funcion y le pasamos el nodo y el id
-    adDetailController(adDetailContainer, adId)
+    adDetailController(adDetailContainer, adId);
 
+    
 })
+
+

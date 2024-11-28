@@ -1,5 +1,7 @@
 
-export async function getAd(adId) { //le pasamos el id para que sparrest nos de solo ese anuncio
+//Obtener los detalles de un anuncio específico (adID) desde sparrest
+
+export async function getAd(adId) { 
     try {
         const response = await fetch(`http://localhost:8000/api/ads/${adId}?_expand=user`);
         const ad = await response.json();

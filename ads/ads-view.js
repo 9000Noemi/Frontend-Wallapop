@@ -10,11 +10,10 @@ export const buildAd = (ad) => {
   const createdAt = new Date(ad.updatedAt)
 
   
-//Construir el contenido html: usuario, fecha formateada
+//Construir el contenido html: usuario, fecha formateada y campos del formulario
 
   newAd.innerHTML = `
     <div>
-      <span>usuario: ${ad.userId} - ${createdAt.toLocaleDateString()}</span>
       <p>${ad.images}</p>
       <p>${ad.name}</p>
       <p>${ad.description}</p>

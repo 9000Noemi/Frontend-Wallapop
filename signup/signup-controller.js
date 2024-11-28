@@ -1,5 +1,6 @@
 import { REGEXP } from "../utils/constants.js";
 import { createUser } from "./signup-model.js";
+import { showSpinner, hideSpinner } from "../utils/spinner.js";
 
 export function signupController(form) {
 
@@ -35,12 +36,15 @@ export function signupController(form) {
 }
 
 async function handleCreateUser(userEmail, password) {
-  //Consumir sparrest para crear el usuario, dar feedback y redirigir a la home
+  const spinner = document.querySelector('.spinner')
   try {
+    showSpinner(spinner);
     await createUser(userEmail, password)
     alert("Te has registrado correctamente");
     window.location.href = "/";
   } catch (error) {
     alert(error.message)
+  }finally {
+    hideSpinner(spinner);
   }
 }

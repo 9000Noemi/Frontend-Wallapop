@@ -1,5 +1,7 @@
 import { REGEXP } from "../utils/constants.js";
 import { loginUser } from "./login-model.js";
+import { showSpinner, hideSpinner } from "../utils/spinner.js";
+
 
 export function loginController(loginForm) {
 
@@ -25,7 +27,11 @@ export function loginController(loginForm) {
 }
 
 async function handleLoginUser(userEmail, password) {
+
+  const spinner = document.querySelector('.spinner')
+  
   try {
+    showSpinner(spinner);
     const token = await loginUser(userEmail, password);
 
     localStorage.setItem("jwt", token);
@@ -35,5 +41,7 @@ async function handleLoginUser(userEmail, password) {
   } catch (error) {
     alert(error.message)
 
+  }finally {
+    hideSpinner(spinner);
   }
 }

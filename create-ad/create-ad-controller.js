@@ -1,6 +1,8 @@
 import { createAd } from "./create-ad-model.js";
+import { showSpinner, hideSpinner } from "../utils/spinner.js";
 
 export function createAdController(createAdForm) {
+
 
     // Escuchar el evento submit del formulario para obtener los datos de creación del anuncio:
 
@@ -25,7 +27,7 @@ export function createAdController(createAdForm) {
 
         // Creamos el objeto que contiene la info del anuncio:
         const adInfo = {
-            images: Array.from(imageInput.files),
+            images: imageInput.value,
             name: nameInput.value,
             description: descriptionInput.value,
             price: priceInput.value,
@@ -43,13 +45,20 @@ export function createAdController(createAdForm) {
 
 
 async function handleAdCreation(adInfo) {
+
+    const spinner = document.querySelector('.spinner')
+
+    showSpinner(spinner);
+    
     try {
         await createAd(adInfo)
         alert("Tu anuncio ha sido creado.");
         window.location.href = "/"
     } catch (error) {
         alert(error.message)
-    }
+    } finally {
+        hideSpinner(spinner);
+      }
 }
 
 

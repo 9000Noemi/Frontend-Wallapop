@@ -1,3 +1,6 @@
+
+//Obtener la información del usuario actualmente logado.
+
 export async function getCurrentUserInfo() {
     const token = localStorage.getItem('jwt');
   

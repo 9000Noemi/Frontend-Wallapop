@@ -1,6 +1,6 @@
 import { getAds } from "./ads-model.js";
 import { buildAd, buildEmptyAdList } from "./ads-view.js";
-
+import { showSpinner, hideSpinner } from "../utils/spinner.js";
 
 function drawAds(ads, adsContainer) {
 
@@ -31,10 +31,10 @@ function drawAds(ads, adsContainer) {
 
 export async function adsController(adsContainer) {
  
-  const spinner = document.querySelector('.spinner')
   adsContainer.innerHTML = "";
+  const spinner = document.querySelector('.spinner')
 
-  spinner.classList.toggle('hidden');
+  showSpinner(spinner);
   try {
     
     const ads = await getAds();
@@ -44,6 +44,6 @@ export async function adsController(adsContainer) {
 
     fireEvent(error.message, "error", adsContainer);
   } finally {
-    spinner.classList.toggle('hidden');
+    hideSpinner(spinner);
   }
 }

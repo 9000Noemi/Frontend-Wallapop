@@ -2,10 +2,10 @@
 export function buildAdDetail(ad) {
   const createdAt = new Date(ad.updatedAt);
 
-  //REVISAR: ES LO MISMO QUE EN AD-VIEW
+  
   return `
       <div>
-        <span>${createdAt.toLocaleDateString()}</span>
+        <span>usuario: ${ad.userId} - ${createdAt.toLocaleDateString()}</span>
         <p>${ad.images}</p>
         <p>${ad.name}</p>
         <p>${ad.description}</p>
