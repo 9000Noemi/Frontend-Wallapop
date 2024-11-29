@@ -3,13 +3,12 @@ import { showSpinner, hideSpinner } from "../utils/spinner.js";
 
 export function createAdController(createAdForm) {
 
-
-    // Escuchar el evento submit del formulario para obtener los datos de creación del anuncio:
+    // Escuchar el evento submit del formulario para obtener los datos de creación del anuncio
 
     createAdForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        //Capturar los valores de cada campo del formulario para formar el objeto de datos del anuncio:
+        //Capturar los valores de cada campo del formulario para formar el objeto de datos del anuncio
 
         const imageInput = createAdForm.querySelector("#image");
         const nameInput = createAdForm.querySelector("#name");
@@ -19,13 +18,8 @@ export function createAdController(createAdForm) {
         const typeRadio = createAdForm.querySelector('input[name="purchaseorsale"]:checked');
         const type = typeRadio ? typeRadio.value : null; // Obtiene el valor de radio seleccionado
 
-        //Validación (a parte del required de html)
-        if (!nameInput.value || !descriptionInput.value || !priceInput.value || !type) {
-            alert("Por favor, completa todos los campos obligatorios");
-            return;
-        }
+        // Crear el objeto que contiene la info del anuncio
 
-        // Creamos el objeto que contiene la info del anuncio:
         const adInfo = {
             images: imageInput.value,
             name: nameInput.value,
@@ -33,7 +27,6 @@ export function createAdController(createAdForm) {
             price: priceInput.value,
             type: type,
         };
-
 
         // Si la validación pasa, se llama a handleAdCreation(adInfo), que maneja la creación del anuncio:
         handleAdCreation(adInfo)
@@ -47,18 +40,19 @@ export function createAdController(createAdForm) {
 async function handleAdCreation(adInfo) {
 
     const spinner = document.querySelector('.spinner')
-
     showSpinner(spinner);
-    
+
     try {
         await createAd(adInfo)
         alert("Tu anuncio ha sido creado.");
         window.location.href = "/"
+
     } catch (error) {
         alert(error.message)
+        
     } finally {
         hideSpinner(spinner);
-      }
+    }
 }
 
 

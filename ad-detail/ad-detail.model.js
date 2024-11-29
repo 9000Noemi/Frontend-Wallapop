@@ -1,7 +1,6 @@
-
 //Obtener los detalles de un anuncio específico (adID) desde sparrest
 
-export async function getAd(adId) { 
+export async function getAd(adId) {
     try {
         const response = await fetch(`http://localhost:8000/api/ads/${adId}?_expand=user`);
         const ad = await response.json();
@@ -16,7 +15,6 @@ export async function getAd(adId) {
         throw new Error(error.message)
     }
 }
-
 
 //Funcion para el borrado del anuncio
 

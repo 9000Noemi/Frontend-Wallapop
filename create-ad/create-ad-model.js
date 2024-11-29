@@ -1,5 +1,5 @@
-
 export async function createAd(adData) {
+  
     const token = localStorage.getItem('jwt');
 
     //Decostruccion del objeto adData para que se pinte cada atributo

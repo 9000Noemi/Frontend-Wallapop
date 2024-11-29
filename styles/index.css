@@ -1,21 +1,22 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f1f1f1; /* Fondo claro como el de Wallapop */
+    color: #333; /* Texto oscuro */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Título principal */
+/* Estilo para el título principal */
 h1 {
     font-size: 2.5rem;
-    color: #ff6600;
+    color: #00bfa5; /* Verde característico de Wallapop */
     margin: 20px 0;
     text-align: center;
+    font-weight: bold;
 }
 
 /* Sección de sesión */
@@ -24,65 +25,9 @@ h1 {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Spinner */
-.spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* Ocultar spinner */
-.hidden {
-    display: none;
-}
-
-/* Animación del spinner */
-.lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-.lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #ff6600;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #ff6600 transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    background-color: #ffffff; /* Fondo blanco para resaltar contenido */
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra ligera */
 }
 
 /* Contenedor de anuncios */
@@ -91,10 +36,63 @@ h1 {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño adaptable */
     gap: 20px;
+}
+
+/* Estilo para cada anuncio */
+#ads-container > div {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto hover en anuncios */
+#ads-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes de los anuncios */
+#ads-container img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Texto dentro de cada anuncio */
+#ads-container .ad-content {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
+
+/* Botones o enlaces */
+button, a {
+    background-color: #00bfa5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Hover en botones o enlaces */
+button:hover, a:hover {
+    background-color: #009688;
+}
+
+/* Clase oculta */
+.hidden {
+    display: none;
 }

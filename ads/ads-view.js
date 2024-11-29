@@ -1,7 +1,6 @@
-
 export const buildAd = (ad) => {
-  
-  ////crear un elemento HTML <a> (un enlace)
+
+  //Crear un elemento HTML <a> (un enlace)
   const newAd = document.createElement('a');
 
   //Añadir un atributo al nodo newAd con setAttribute. Pasamos el link y el id al que queremos acceder:
@@ -9,9 +8,7 @@ export const buildAd = (ad) => {
 
   const createdAt = new Date(ad.updatedAt)
 
-  
-//Construir el contenido html: usuario, fecha formateada y campos del formulario
-
+  //Construir el contenido html: campos del formulario
   newAd.innerHTML = `
     <div>
       <p>${ad.images}</p>
@@ -23,7 +20,6 @@ export const buildAd = (ad) => {
   `;
   return newAd;
 }
-
 
 //Indicar al usuario que no hay anuncios
 export function buildEmptyAdList() {
