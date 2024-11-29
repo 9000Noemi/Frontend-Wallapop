@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "username": "user1@example.com",
+      "password": "$2b$10$Sf5Nc/brL4ZqXxi.bcL1S.AA6Uq1.siwpbf1FahXoX72qYo83oy2C",
+      "id": 1
+    },
+    {
+      "username": "user2@example.com",
+      "password": "$2b$10$Sf5Nc/brL4ZqXxi.bcL1S.AA6Uq1.siwpbf1FahXoX72qYo83oy2C",
+      "id": 2
+    },
+    {
+      "username": "user3@example.com",
+      "password": "$2b$10$Sf5Nc/brL4ZqXxi.bcL1S.AA6Uq1.siwpbf1FahXoX72qYo83oy2C",
+      "id": 3
+    },
+    {
+      "username": "user4@example.com",
+      "password": "$2b$10$6Gcy.qqavDwA.6eXoXmy3.8.NmcS6fppvY/TNtxw/KKS4ngaNpZ1C",
+      "id": 4
+    },
+    {
+      "username": "user5@example.com",
+      "password": "$2b$10$XQGxpjGbSpmD.IW1CBu18.Sml5KTXcn8GZ6AHBYJ1BE3pT2bUDdP6",
+      "id": 5
+    }
+  ],
+  "ads": [
+    {
+      "images": "https://www.coches.net/renault-clio-rt-19dti-5p-diesel-2001-en-toledo-59241334-covo.aspx",
+      "name": "Renault Clio",
+      "description": "Vehículo de segunda mano en perfecto estado del año 2001. Cambio manual, 5 puertas, azul, 5 plazas, diesel, 80 cv, a buscar en Toledo. Hay que cambiar el cuadro de instrumentos.",
+      "price": "1200",
+      "type": "SALE",
+      "userId": 1,
+      "updatedAt": "2024-11-29T11:24:08.601Z",
+      "id": 1
+    },
+    {
+      "images": "https://www.ikea.com/es/es/p/kallax-estanteria-blanco-20275814/",
+      "name": "Estanteria kallax Ikea",
+      "description": "Estantería blanca 77x77.\nCuélgala en la pared o colócala en el suelo: la serie KALLAX se adapta a tus gustos, espacio y presupuesto. Personaliza la estantería con accesorios y cajas según tus necesidades.",
+      "price": "22",
+      "type": "SALE",
+      "userId": 1,
+      "updatedAt": "2024-11-29T11:26:09.421Z",
+      "id": 2
+    },
+    {
+      "images": "https://www.amazon.es/SIHOO-m102c-reposabrazos-Plegables-ergon%C3%B3mica/dp/B0CLLRNFB8/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.MofvbWmWxlHGPdgUHt3iRFNiNNCoqCPB9jY2V0B8-2iPxXSrbRUPaSzCOfZGjGzivW5vmTQpi--TfPXFzIJRIuUwKERa_tJ4zaO_sJSbKaPo44hArk0cVVto6z0pHvwjYvqXoh6GAhj2FT7GSeKx_VTWdIP2x6tp4dOr0K_ZsDjMOfAqadfw8iw3aZqA3_jUAG4rrhlX3L5-OlzM-6l_DwoAmhn885b9m2hf8US54lk9G5CxNa6V6F3dVpPVDT8n4ue5LyIGEy1yXaIP0iV1vUJBJiQNlbqtUYoIoJ2bVTk.cs1G-6Xj1yQMS0uyw8Tv9pLnSwmXqVDWjOYQipvnOtE&dib_tag=se&keywords=silla+ergon%C3%B3mica&nsdOptOutParam=true&qid=1732879625&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+      "name": "Silla de Oficina Ergonómica",
+      "description": "La silla de ordenador SIHOO M102C ofrece un adecuado soporte para tu cabeza, espalda, caderas, brazos y cintura. ",
+      "price": "99",
+      "type": "SALE",
+      "userId": 1,
+      "updatedAt": "2024-11-29T11:28:16.921Z",
+      "id": 3
+    },
+    {
+      "images": "https://www.zooplus.es/shop/tienda_perros/comederos/comederos_altos/338495?variantId=338495.3&utm_source=google&utm_medium=google_pmax&utm_campaign=17505189720&utm_term=338495.3&utm_content=pla_with_promotion&utm_id=17505189720_17505189720&gad_source=1&gclid=CjwKCAiA6aW6BhBqEiwA6KzDczLaaH38tF4p2rgRP-9u2W-nvHlGojPX_Kd0WVXdS0ayi-UReeHGgxoCZ4kQAvD_BwE&activeVariant=338495.3",
+      "name": "Comedero para perros",
+      "description": "Comedero alto para perros formado por un soporte ajustable y 2 comederos de acero inoxidable, para una postura correcta al comer y beber. Ideal para perros mayores, grandes y perros en crecimiento.",
+      "price": "10",
+      "type": "PURCHASE",
+      "userId": 2,
+      "updatedAt": "2024-11-29T11:29:44.944Z",
+      "id": 4
+    },
+    {
+      "images": "https://www.elcorteingles.es/electronica/A53371749-apple-ipad-109-2024-wi-fi-10-gen/?stype=search_redirect&parentCategoryId=999.52257013&color=Plata",
+      "name": "Ipad",
+      "description": "El nuevo iPad estrena look y te ofrece más posibilidades que nunca. Supantalla Liquid Retina de 10,9 pulgadas con diseño de borde a borde1 es perfecta para trabajar.",
+      "price": "249",
+      "type": "PURCHASE",
+      "userId": 2,
+      "updatedAt": "2024-11-29T11:32:28.064Z",
+      "id": 5
+    },
+    {
+      "images": "https://www.fnac.es/a8737595/Pack-Tierra-Media-El-Hobbit-y-El-Senor-de-los-Anillos-Edicion-Coleccionista-UHD-Blu-Ray-Elijah-Wood",
+      "name": "Peliculas edicion coleccionista El Señor de Los Anillos",
+      "description": "Edición coleccionista Tierra Media consta de 31 discos con las trilogías El Hobbit y El Señor de los Anillos adaptadas a la gran pantalla por Peter Jackson.",
+      "price": "175",
+      "type": "SALE",
+      "userId": 3,
+      "updatedAt": "2024-11-29T11:35:21.656Z",
+      "id": 6
+    },
+    {
+      "images": "https://www.thenorthface.es/es-es/p/mujer-211718/chaqueta-con-capucha-quest-para-mujer-NF00A8BA?color=1IX&gad_source=1&gclid=CjwKCAiA6aW6BhBqEiwA6KzDc5fXDifDOGDJSxlhFKgL_q7BKC1E6VqH49tUrNhPJj_b1MiXRvg5wxoCcKUQAvD_BwE&gclsrc=aw.ds",
+      "name": "Abrigo de montaña",
+      "description": "Chaqueta con capucha Quest para mujer.  Es ideal para hacer trekking en condiciones climatológicas variables.",
+      "price": "99",
+      "type": "PURCHASE",
+      "userId": 3,
+      "updatedAt": "2024-11-29T11:37:40.338Z",
+      "id": 7
+    },
+    {
+      "images": "",
+      "name": "Botas",
+      "description": "Estas botas impermeables, con membrana Gore-Tex, han sido diseñadas para las rutas por terrenos con cierto desnivel y con cualquier tiempo.",
+      "price": "59",
+      "type": "SALE",
+      "userId": 4,
+      "updatedAt": "2024-11-29T11:40:13.144Z",
+      "id": 8
+    },
+    {
+      "images": "",
+      "name": "Planta decorativa",
+      "description": "Planta decorativa para hogar y oficinas.",
+      "price": "20",
+      "type": "SALE",
+      "userId": 5,
+      "updatedAt": "2024-11-29T11:41:41.569Z",
+      "id": 9
+    }
+  ]
+}
