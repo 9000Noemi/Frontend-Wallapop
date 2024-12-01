@@ -6,10 +6,4 @@
 
 - En db.json creamos el array "ads". Cada vez que modifiquemos manualmente sparrest hay que tirarlo y volver a levantarlo.
 
-- Creamos la carpeta ads con controller, model y views.
 
-- En ads-models.js creamos la función getAds con la conexión a la Api usando fetch
-
-- En ad-views creamos un metodo para indicar al usuario si no hay anuncios.
-
-- Creamos login y signup
